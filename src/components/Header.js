@@ -64,9 +64,9 @@ export default function Header(){
                <h1 className={classes.appbarTitle}>
                   MY<span className={classes.colorText}>ISLAND</span>
                </h1>
-               <iconButton>
+               <IconButton>
                    <SortIcon className={classes.icon}/>
-               </iconButton>
+               </IconButton>
            </Toolbar>
         </AppBar>
         <Collapse in={checked}
