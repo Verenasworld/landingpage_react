@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) =>
             height: '100vh',
         },
     }));
-export default function Visit () {
+export default function PlaceToVisit () {
     const classes = useStyles();
     return (
         <div className={classes.root}>

@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+
 const useStyles = makeStyles({
     root: {
         maxWidth: 645,
@@ -28,7 +29,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default function ImageCard(place) {
+export default function ImageCard({place}) {
     const classes = useStyles();
 
     return (
