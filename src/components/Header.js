@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {AppBar, Toolbar} from "@material-ui/core";
+import {AppBar, Collapse, IconButton, Toolbar} from "@material-ui/core";
 import SortIcon from '@material-ui/icons/Sort';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 const useStyles = makeStyles((theme)=>({
@@ -28,15 +29,23 @@ const useStyles = makeStyles((theme)=>({
         margin: '0 auto'
     },
     colorText:{
-        color:' #0163A0',
+        color:'#0163A0',
+    },
+
+    container:{
+        textAlign:'center'
     },
     title:{
 
-        fontSize:'50px',
+        fontSize:'4rem',
         fontFamily: 'Nunito',
         fontWeight: '200',
-        backgroundColor: 'rgba(255,255,255, 0.8)',
-        padding: '20px 50px 20px 50px'
+        backgroundColor: 'rgba(255,255,255, 0.7)',
+        padding: '20px 100px 20px 100px'
+    },
+    goDown:{
+        color: '#0163A0',
+        fontSize: '4rem'
     }
 
 
@@ -45,6 +54,10 @@ const useStyles = makeStyles((theme)=>({
 
 export default function Header(){
     const classes = useStyles();
+    const [checked,setChecked] = useState(false)
+    useEffect(()=>{
+        setChecked(true)
+    },[])
     return <div className={classes.root}>
         <AppBar className={classes.appbar} elevation={0}>
            <Toolbar className={classes.appbarWrapper}>
@@ -56,10 +69,19 @@ export default function Header(){
                </iconButton>
            </Toolbar>
         </AppBar>
-        <div>
-            <h2 className={classes.title}>
-                Welcome to <br/>My <span className={classes.colorText}>Island!</span>
-            </h2>
-        </div>
+        <Collapse in={checked}
+                  {...(checked ? { timeout: 1000 } : {})}
+                  collapsedHeight={50}>
+            <div className={classes.container}>
+                <h2 className={classes.title}>
+                    Welcome to <br/>My <span className={classes.colorText}>Island!</span>
+                </h2>
+                <IconButton>
+                    <ExpandMoreIcon className={classes.goDown}/>
+                </IconButton>
+
+            </div>
+        </Collapse>
+
     </div>;
 }
