@@ -21,6 +21,9 @@ export default function App(){
         <CssBaseline/>
         <Header/>
         <PlaceToVisit/>
+        <div>
+            <h1>Section1</h1>
+        </div>
 
     </div>
 };

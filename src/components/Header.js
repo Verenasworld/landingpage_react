@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme)=>({
     },
     appbar:{
         background: 'none',
-        fontFamily: 'Nunito',
+        fontFamily: 'Roboto',
         fontWeight: '200',
     },
     icon:{
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme)=>({
     title:{
 
         fontSize:'4rem',
-        fontFamily: 'Nunito',
+        fontFamily: 'Roboto',
         fontWeight: '200',
         backgroundColor: 'rgba(255,255,255, 0.7)',
         padding: '20px 100px 20px 100px'

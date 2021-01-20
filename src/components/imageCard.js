@@ -17,9 +17,9 @@ const useStyles = makeStyles({
         height: 300,
         boxShadow:'5px 3px 10px #00395C',
         '&:hover':{
-            transition: 'height 2s',
-            boxShadow:'5px 3px 10px #7FCDCD',
-            height: 350
+            transition: 'height 3s',
+            height: 350,
+            margin:'20px'
         }
     },
 
