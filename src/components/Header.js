@@ -56,18 +56,19 @@ export default function Header(){
     const classes = useStyles();
     const [checked,setChecked] = useState(false)
     useEffect(()=>{
-        setChecked(true)
-    },[])
-    return <div className={classes.root}>
+        setChecked(true);
+    },[]);
+    return (
+        <div className={classes.root} id='header'>
         <AppBar className={classes.appbar} elevation={0}>
-           <Toolbar className={classes.appbarWrapper}>
-               <h1 className={classes.appbarTitle}>
-                  MY<span className={classes.colorText}>ISLAND</span>
-               </h1>
-               <IconButton>
-                   <SortIcon className={classes.icon}/>
-               </IconButton>
-           </Toolbar>
+            <Toolbar className={classes.appbarWrapper}>
+                <h1 className={classes.appbarTitle}>
+                    MY<span className={classes.colorText}>ISLAND</span>
+                </h1>
+                <IconButton>
+                    <SortIcon className={classes.icon}/>
+                </IconButton>
+            </Toolbar>
         </AppBar>
         <Collapse in={checked}
                   {...(checked ? { timeout: 1000 } : {})}
@@ -83,5 +84,6 @@ export default function Header(){
             </div>
         </Collapse>
 
-    </div>;
-}
+    </div>
+    )
+};
