@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {AppBar, Collapse, IconButton, Toolbar} from "@material-ui/core";
 import SortIcon from '@material-ui/icons/Sort';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Link as Scroll } from 'react-scroll'
 
 
 const useStyles = makeStyles((theme)=>({
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme)=>({
     },
     icon:{
         fontSize: '2rem',
+
     },
     appbarTitle:{
         flexGrow: 1,
@@ -29,7 +31,7 @@ const useStyles = makeStyles((theme)=>({
         margin: '0 auto'
     },
     colorText:{
-        color:'#0163A0',
+        color:'#00395c',
     },
 
     container:{
@@ -44,8 +46,11 @@ const useStyles = makeStyles((theme)=>({
         padding: '20px 100px 20px 100px'
     },
     goDown:{
-        color: '#0163A0',
-        fontSize: '4rem'
+        color: 'white',
+        fontSize: '4rem',
+        background: 'rgba(1,99,150,0.3)',
+        borderRadius: 50
+
     }
 
 
@@ -77,9 +82,11 @@ export default function Header(){
                 <h2 className={classes.title}>
                     Welcome to <br/>My <span className={classes.colorText}>Island!</span>
                 </h2>
+                <Scroll to='place-to-visit' smooth={true}>
                 <IconButton>
                     <ExpandMoreIcon className={classes.goDown}/>
                 </IconButton>
+                </Scroll>
 
             </div>
         </Collapse>

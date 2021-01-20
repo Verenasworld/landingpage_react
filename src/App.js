@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
             minHeight: '100vh',
             backgroundImage: `url(${process.env.PUBLIC_URL + "/assets/test_bild.jpg"})`,
             backgroundRepeat  : 'no-repeat',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
+            backgroundPosition: "right"
         }
 }));
 

@@ -9,13 +9,20 @@ import { Collapse } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 645,
-        background: 'rgba(0,0,0,0.5)',
+        maxWidth: 700,
+        background: 'rgba(0,57,92,0.6)',
         margin: '20px',
     },
     media: {
-        height: 440,
+        height: 300,
+        boxShadow:'5px 3px 10px #00395C',
+        '&:hover':{
+            transition: 'height 2s',
+            boxShadow:'5px 3px 10px #7FCDCD',
+            height: 350
+        }
     },
+
     title: {
         fontFamily: 'Roboto',
         fontWeight: 'thin',
@@ -39,6 +46,8 @@ export default function ImageCard({ place, checked }) {
                     className={classes.media}
                     image={place.imageUrl}
                     title="Contemplative Reptile"
+
+
                 />
                 <CardContent>
                     <Typography

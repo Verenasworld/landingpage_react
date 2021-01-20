@@ -11,13 +11,15 @@ const useStyles = makeStyles((theme) =>
             display: 'flex',
             justifyContent:'center',
             alignItems: 'center',
+            [theme.breakpoints.down("md")] :{flexDirection:"column"},
+
         },
     }));
 export default function PlaceToVisit () {
     const classes = useStyles();
     const checked = useWindowsPosition('header');
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id='place-to-visit'>
             <ImageCard place={places[0]} checked ={checked} />
             <ImageCard place={places[1]} checked ={checked}/>
         </div>
